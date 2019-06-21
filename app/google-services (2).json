@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1061262002577",
+    "firebase_url": "https://negocio-app.firebaseio.com",
+    "project_id": "negocio-app",
+    "storage_bucket": "negocio-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061262002577:android:ec5b100124a2528d",
+        "android_client_info": {
+          "package_name": "com.dineyandroid.negocio.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061262002577-9avutqm2f395agb14s7ninks4g753llo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dineyandroid.negocio.app",
+            "certificate_hash": "c41f3934eec32dadd52e294759c1b91247ec2166"
+          }
+        },
+        {
+          "client_id": "1061262002577-chp0t955vhtnn3ejnj38rb8i7dvame2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWEymvkQQ1pruYLonfVdi1pOq2GIHHYKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061262002577-chp0t955vhtnn3ejnj38rb8i7dvame2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
