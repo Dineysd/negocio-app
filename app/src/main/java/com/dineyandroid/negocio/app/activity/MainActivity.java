@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.dineyandroid.negocio.app.R;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     private Button botaoAcessar;
     private EditText campoEmail, campoSenha;
