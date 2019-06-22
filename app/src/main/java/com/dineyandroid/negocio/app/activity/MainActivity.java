@@ -36,6 +36,7 @@ public class  MainActivity extends AppCompatActivity {
 
         //FirebaseApp.initializeApp(MainActivity.this);
         inicializarComponentes();
+
         autentificacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         botaoAcessar.setOnClickListener(new View.OnClickListener() {
