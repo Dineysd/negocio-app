@@ -1,12 +1,14 @@
 package com.dineyandroid.negocio.app.activity;
 
 import android.app.Application;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -29,12 +31,22 @@ public class  MainActivity extends AppCompatActivity {
 
     private FirebaseAuth autentificacao;
 
+    RelativeLayout animate;
+    private Handler handler = new Handler();
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            animate.setVisibility(View.VISIBLE);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        animate = (RelativeLayout) findViewById(R.id.login_animate);
+        handler.postDelayed(runnable, 2000);
 
-        //FirebaseApp.initializeApp(MainActivity.this);
         inicializarComponentes();
 
         autentificacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
