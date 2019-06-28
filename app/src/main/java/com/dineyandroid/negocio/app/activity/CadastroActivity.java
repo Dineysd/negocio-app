@@ -1,6 +1,6 @@
 package com.dineyandroid.negocio.app.activity;
 
-import android.app.Application;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -16,14 +16,13 @@ import com.dineyandroid.negocio.app.R;
 import com.dineyandroid.negocio.app.helper.ConfiguracaoFirebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
-public class  MainActivity extends AppCompatActivity {
+public class CadastroActivity extends AppCompatActivity {
 
     private Button botaoAcessar;
     private EditText campoEmail, campoSenha;
@@ -31,7 +30,7 @@ public class  MainActivity extends AppCompatActivity {
 
     private FirebaseAuth autentificacao;
 
-    RelativeLayout animate;
+    private RelativeLayout animate;
     private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
         @Override
@@ -43,7 +42,7 @@ public class  MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_cadastro);
         animate = (RelativeLayout) findViewById(R.id.login_animate);
         handler.postDelayed(runnable, 2000);
 
@@ -63,12 +62,12 @@ public class  MainActivity extends AppCompatActivity {
                         verificarSwitch(email, senha);
 
                     } else {
-                        Toast.makeText(MainActivity.this, "Preencha a senha!",
+                        Toast.makeText(CadastroActivity.this, "Preencha a senha!",
                                 Toast.LENGTH_SHORT).show();
                     }
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Preencha E-mail!",
+                    Toast.makeText(CadastroActivity.this, "Preencha E-mail!",
                             Toast.LENGTH_SHORT).show();
                 }
             }
@@ -99,12 +98,13 @@ public class  MainActivity extends AppCompatActivity {
 
     private void logar(@NonNull Task<AuthResult> task) {
         if (task.isSuccessful()){
-            Toast.makeText(MainActivity.this,
+            Toast.makeText(CadastroActivity.this,
                     "Logado com sucesso!",
                     Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), AnunciosActivity.class ));
         } else {
 
-            Toast.makeText(MainActivity.this,
+            Toast.makeText(CadastroActivity.this,
                     "Erro ao fazer login: "+ task.getException(),
                     Toast.LENGTH_SHORT).show();
 
@@ -113,13 +113,13 @@ public class  MainActivity extends AppCompatActivity {
 
     private void cadastrar(@NonNull Task<AuthResult> task) {
         if (task.isSuccessful()){
-            Toast.makeText(MainActivity.this,
+            Toast.makeText(CadastroActivity.this,
                     "Cadastro realizado com sucesso!",
                     Toast.LENGTH_SHORT).show();
         } else {
             String erroExcecao = "";
             erroExcecao = erroExcecaoException(task);
-            Toast.makeText(MainActivity.this, "Erro: "+ erroExcecao,
+            Toast.makeText(CadastroActivity.this, "Erro: "+ erroExcecao,
                     Toast.LENGTH_SHORT).show();
 
         }

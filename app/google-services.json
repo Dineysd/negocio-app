@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1061262002577-ldt65o921g3pq36r3tpbq81tds569usb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dineyandroid.negocio.app",
+            "certificate_hash": "3840ee87512103682a19dd59425e1be095281a0e"
+          }
+        },
+        {
           "client_id": "1061262002577-9avutqm2f395agb14s7ninks4g753llo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
