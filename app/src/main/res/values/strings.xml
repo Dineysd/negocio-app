@@ -1,4 +1,41 @@
 <resources>
-    <string name="app_name">Negocio App</string>
-    <string name="title_activity_meus_anuncios">MeusAnunciosActivity</string>
+    <string name="app_name">Garage</string>
+    <string name="title_activity_meus_anuncios">Meus Anúncios</string>
+    <string-array name="estados">
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+    <string-array name="categorias">
+        <item>BMW</item>
+        <item>Audi</item>
+        <item>Ferrari</item>
+        <item>Aston Martin</item>
+        <item>BMW</item>
+        <item>Mercedes-Benz</item>
+        <item>Porsche</item>
+    </string-array>
 </resources>

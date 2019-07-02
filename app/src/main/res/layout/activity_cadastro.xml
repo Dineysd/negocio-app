@@ -10,34 +10,51 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="210dp"
-        android:layout_height="170dp"
-        android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/negociomobilelogo" />
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/carro" />
+
     <RelativeLayout
         android:id="@+id/login_animate"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="239dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:gravity="center"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textColor="#DAA520"/>
 
             <EditText
                 android:id="@+id/editCadastroEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit_text"
+                android:layout_marginBottom="10dp"
                 android:ems="10"
-                android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:padding="10dp"
-                android:textColorHint="@android:color/white" />
+                android:padding="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textColor="#DAA520"/>
 
             <EditText
                 android:id="@+id/editCadastroSenha"
@@ -46,7 +63,6 @@
                 android:layout_marginTop="-2dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textColorHint="@android:color/white" />
@@ -55,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="7dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -64,31 +80,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Logar"
-                    android:textColor="@android:color/white" />
+                    android:textColor="#DAA520"
+                    android:textStyle="bold"/>
 
                 <Switch
                     android:id="@+id/switchAcesso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginRight="10dp"/>
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cadastre-se"
-                    android:textColor="@android:color/white" />
+                    android:textColor="#DAA520"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
             <Button
                 android:id="@+id/buttonAcesso"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
                 android:text="Acessar"
-                android:theme="@style/BotaoPadrao" />
+                android:textColor="#DAA520"
+                android:textSize="20sp"
+                android:layout_height="50dp"
+                android:background="@drawable/botaocustomizado"
+                android:shadowColor="#303030"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="15"
+                android:textStyle="bold"/>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
