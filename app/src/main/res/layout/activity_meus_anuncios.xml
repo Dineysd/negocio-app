@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
     tools:context=".activity.MeusAnunciosActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -28,6 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_adicionar_branco_24dp" />
+        app:srcCompat="@drawable/ic_adicionar_branco_24dp"/>
 
 </android.support.design.widget.CoordinatorLayout>

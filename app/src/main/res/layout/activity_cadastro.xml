@@ -19,7 +19,7 @@
         android:id="@+id/login_animate"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"

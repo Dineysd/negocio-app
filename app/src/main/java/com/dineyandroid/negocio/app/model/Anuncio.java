@@ -3,9 +3,10 @@ package com.dineyandroid.negocio.app.model;
 import com.dineyandroid.negocio.app.helper.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Anuncio {
+public class Anuncio implements Serializable {
 
     private String idAnuncio;
     private String estado;
@@ -31,6 +32,38 @@ public class Anuncio {
         refAnuncio.child(idUsuario)
                 .child(getIdAnuncio())
                 .setValue(this);
+        salvarAnuncioPublico();
+    }
+
+    public  void salvarAnuncioPublico(){
+
+        DatabaseReference refAnuncio = ConfiguracaoFirebase.getReferenceFirebase()
+                .child("anuncios");
+        refAnuncio.child(getEstado())
+                .child(getCategoria())
+                .child(getIdAnuncio())
+                .setValue(this);
+    }
+
+    public void remover(){
+        String idUsuario = ConfiguracaoFirebase.getIdUsuario();
+
+        DatabaseReference refAnuncio = ConfiguracaoFirebase.getReferenceFirebase()
+                .child("meus_anuncios")
+                .child(idUsuario)
+                .child(getIdAnuncio());
+        refAnuncio.removeValue();
+        removerAnuncioPublico();
+    }
+
+    public void removerAnuncioPublico(){
+
+        DatabaseReference refAnuncio = ConfiguracaoFirebase.getReferenceFirebase()
+                .child("anuncios")
+                .child(getEstado())
+                .child(getCategoria())
+                .child(getIdAnuncio());
+        refAnuncio.removeValue();
     }
 
     public String getIdAnuncio() {

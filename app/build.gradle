@@ -32,11 +32,20 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:16.1.0'
     implementation 'com.google.firebase:firebase-auth:16.2.1'
 
-    /*mascara de moedas*/
+    /*Dependencia mascara de moedas*/
     implementation 'com.github.BlacKCaT27:CurrencyEditText:2.0.2'
 
-    /*mascara de telefones*/
+    /*Dependencia mascara de telefones*/
     implementation 'com.github.santalu:mask-edittext:1.0.7'
+
+    //Dependencia Dialog de progresso
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+    //Dependencia picasso para imagens
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Dependencia do carousel view
+    implementation 'com.synnapps:carouselview:0.1.5'
 }
 
 apply plugin: 'com.google.gms.google-services'

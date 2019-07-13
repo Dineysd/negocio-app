@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    android:orientation="vertical"
+    tools:context=".activity.DetalhesAnuncioActivity">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselViewDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+    <TextView
+        android:id="@+id/textTituloDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titulo"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/textValorDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R$ 250,00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
+    
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <TextView
+        android:id="@+id/textEstadoDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SP"
+        android:drawableLeft="@drawable/ic_location_azul_24dp"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <TextView
+        android:id="@+id/textDescricaoDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descricão"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="visualizarTelefone"
+        android:textColor="#DAA520"
+        android:text="Ver Telefone"
+        android:background="@drawable/botaocustomizado"
+        android:shadowColor="#303030"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="15"
+        android:textStyle="bold" />
+
+</LinearLayout>

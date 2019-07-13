@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/grad_bg"
     android:padding="16dp"
     tools:context=".activity.CadastrarAnunciosActivity">
 
@@ -66,7 +67,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
-        android:text="Titulo" />
+        android:text="Titulo"
+        android:textColor="#DAA520"/>
 
     <EditText
         android:id="@+id/editTitulo"
@@ -83,7 +85,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
-        android:text="Valor" />
+        android:text="Valor"
+        android:textColor="#DAA520"/>
 
     <com.blackcat.currencyedittext.CurrencyEditText
         android:id="@+id/editValor"
@@ -100,7 +103,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
-        android:text="Telefone" />
+        android:text="Telefone"
+        android:textColor="#DAA520"/>
 
     <com.santalu.maskedittext.MaskEditText
         android:id="@+id/editTelefone"
@@ -117,6 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
+        android:textColor="#DAA520"
         android:text="Descrição" />
 
     <EditText
@@ -135,7 +140,14 @@
             android:layout_height="wrap_content"
             android:onClick="validarAnuncio"
             android:text="Cadastrar Anuncios"
-            android:theme="@style/BotaoPadrao" />
+            android:textColor="#DAA520"
+            android:background="@drawable/botaocustomizado"
+            android:shadowColor="#303030"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="15"
+            android:textStyle="bold"
+            />
     </LinearLayout>
     </ScrollView>
 </LinearLayout>
